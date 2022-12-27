@@ -21,5 +21,10 @@ public class AccountService {
 	public Account getAccountDetails(int accountId) {
 		return accountRepository.findById(accountId).get();
 	}
+	
+	public Account registerDummyAccount() {
+		Account account = new Account(1010101010,"Shubham","Saving Account",20000.0);
+		return account;
+	}
 
 }
